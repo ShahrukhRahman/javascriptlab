@@ -1,0 +1,50 @@
+<script type="text/javascript" >
+	
+function f1()
+{
+
+	
+var email= document.getElementById('email').value;
+if(email=="")
+	{ document.getElementById('demail').innerHTML="email cannot be empty";}
+var emailsplit= email.split("");
+for(var b=0; b<emailsplit.length;b++)
+	{
+if((emailsplit[b]>='A' && emailsplit[b]<='Z') ||(emailsplit[b]>=0 && emailsplit[b]>=9) || emailsplit[b]=='@'|| emailsplit=='.')
+{continue;
+
+}
+}
+else
+{document.getElementById('demail').innerHTML="invalid email";  flag= false;;
+break;
+}
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form>
+		<input id="name" type="text" name="" value="" onblur="f1()" /><br> <p id="msg"></p>
+		<input type="button" name="btn" value="Click" onclick="f1()">
+	</form>
+	<script>
+	"use strict"
+	function f1()
+{
+	var name = document.getElementById('name').value;
+	if(name=="")
+	{
+		document.getElementById('msg').innerHTML = "null submission";
+	}
+	else if(!name.includes("@"))
+	{
+		document.getElementById('msg').innerHTML = "use valid email address";
+	}
+
+}
+</script>
+</body>
+</html
